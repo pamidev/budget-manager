@@ -1,3 +1,3 @@
-# Home Budget Manager
+# Budget Manager
 
-Python program that helps manage home budget.
+Python program that helps manage budget.
