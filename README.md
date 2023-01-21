@@ -1,3 +1,3 @@
 # Budget Manager
 
-A program that helps you manage your budget.
+A Python program that helps to manage your budget.
