@@ -56,7 +56,7 @@ I assume You know how to cloning this repository. If not, I refer you to
 Python version should not matter here, although the program was written and tested on version 3.11.3. 
 You can check Python version by typing in terminal:
 ```bash
-python --version
+$ python --version
 ```
 
 Now You need to create and activate _virtual environment_ like this:
