@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 import click
 
-DB_FILENAME = "budget_database.db"
+DB_FILENAME = r".\data\budget-database.db"
 MUCH_EXPENSIVE = 1000
 
 
@@ -19,7 +19,7 @@ class Expense:
         if self.amount <= 0:
             raise ValueError("Amount cannot be zero or negative.")
         if not self.desc:
-            raise ValueError("Decription cannot be empty.")
+            raise ValueError("Description cannot be empty.")
 
     def is_expensive(self) -> bool:
         return self.amount >= MUCH_EXPENSIVE
@@ -75,7 +75,7 @@ def print_report(expenses: list[Expense], total: float) -> None:
                 warning = ''
             print(
                 f"{expense.id:5d} {expense.amount:15.2f} {warning:^9} {expense.desc}"
-                )
+            )
         print("---------------------------------------------------------")
         print(f"{'TOTAL:':>6} {total:14.2f}")
         print("---------------------------------------------------------")
@@ -128,10 +128,10 @@ def import_csv(csv_filepath: str) -> None:
             reader = csv.DictReader(stream)
             for row in reader:
                 csv_expense = Expense(
-                                id=find_free_id(expenses),
-                                amount=float(row['amount']),
-                                desc=row['description'],
-                                )
+                    id=find_free_id(expenses),
+                    amount=float(row['amount']),
+                    desc=row['description'],
+                )
                 expenses.append(csv_expense)
     except FileNotFoundError:
         print(":-( Error: Bad file path.")
