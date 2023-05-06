@@ -19,9 +19,9 @@ You can add, report, import and export expenses right at run the program.
 
 Tanks to this project, I learned how to:
 - write definitions with only one responsibility,
-- easy write _classes_ using `@dataclass` decorator,
+- write easy _classes_ using `@dataclass` decorator,
 - use Python standard library modules: _csv_, _dataclasses_, _pickle_, _sys_,
-- use Python external packages like _click_ (_Command Line Interface Creation Kit_).
+- use Python third-party packages like _click_ (_Command Line Interface Creation Kit_).
 
 
 ## Technologies Used
@@ -31,17 +31,17 @@ Tanks to this project, I learned how to:
   - [_dataclasses_](https://docs.python.org/3/library/dataclasses.html) module
   - [_pickle_](https://docs.python.org/3/library/pickle.html) module
   - [_sys_](https://docs.python.org/3/library/sys.html) module
-- from external Python packages:
+- from Python third-party packages:
   - [_click_](https://pypi.org/project/click/) package - version 8.1.3
 
 
 ## Features
-- The program has subcommands: add, report, export-python and import-csv:
+- The program has subcommands: _add_, _report_, _export-python_ and _import-csv_:
   - _**add**_ - allows you to add a new expense,
   - _**report**_ - displays all the expenses in the table with total sum,
   - _**import-csv**_ - imports the list of expenses from a CSV file,
   - _**export-python**_ - displays the list of all expenses as an object,
-- The program stores a database of all expenses in _data_ directory as _budget-database.db_ file. 
+- The program stores a database of all expenses in `data` directory as `budget-database.db` file. 
 If the file does not exist, automatically creates a new empty database in _data_ directory.
 
 
@@ -51,10 +51,13 @@ If the file does not exist, automatically creates a new empty database in _data_
 
 ## Setup
 I assume You know how to cloning this repository. If not, I refer you to 
-[this publication](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+[this publication](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 Python version should not matter here, although the program was written and tested on version 3.11.3. 
-You can check Python version by typing in terminal:
+
+> If You don't have any Python version, download and install [from here](https://www.python.org/).
+
+You can verify Python version by typing in terminal:
 ```bash
 $ python --version
 ```
@@ -64,8 +67,8 @@ Now You need to create and activate _virtual environment_ like this:
 $ python -m venv .venv
 $ cd .venv\Scripts
 $ activate
-$ cd..
-$ cd..
+$ cd ..
+$ cd ..
 ```
 and install _click_ package in the previously created _virtual environment_:
 ``` bash
@@ -103,5 +106,5 @@ $ python budget-manager.py export-python
 
 ## Acknowledgements
 - This program was inspired by one of exercises of
-[the Practical Python](https://praktycznypython.pl/) educational program
-- Many thanks to [Krzysztof Mędrela](https://medrela.com/)
+[the Practical Python](https://praktycznypython.pl/) educational program.
+- Many thanks to [Krzysztof Mędrela](https://medrela.com/).
