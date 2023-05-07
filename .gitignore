@@ -21,3 +21,4 @@ Thumbs.db
 .coverage
 .tox/
 .eggs/
+.pytest_cache/
