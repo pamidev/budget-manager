@@ -41,6 +41,7 @@ Tanks to this project, I learned how to:
   - _**report**_ - displays all the expenses in the table with total sum,
   - _**import-csv**_ - imports the list of expenses from a CSV file,
   - _**export-python**_ - displays the list of all expenses as an object,
+  - _**clear-db**_ - clear database file.
 - The program stores a database of all expenses in `data` directory as `budget-database.db` file. 
 If the file does not exist, automatically creates a new empty database in _data_ directory.
 
@@ -78,29 +79,43 @@ or
 ``` bash
 $ pip install -U click
 ```
+You can also install _pytest_ package with dependencies if You want to test my program:
+``` bash
+$ pip install -r tests_requirements.txt
+```
+or
+``` bash
+$ pip install -U pytest
+```
 
-After installing this, run the program like bellow.
+After installation, run the program as shown below.
 
 
 ## Usage
 To _**add**_ some expense type in terminal like this:
 ```bash
-$ python budget-manager.py add 100 "some expense"
+$ python budget_manager.py add 100 "some expense"
 ```
 
 To _**import**_ CSV file with expenses type in terminal:
 ```bash
-$ python budget-manager.py import-csv data\expenses.csv
+$ python budget_manager.py import-csv data\expenses.csv
 ```
 
 To _**report**_ expenses, if You have saved in database any:
 ```bash
-$ python budget-manager.py report
+$ python budget_manager.py report
 ```
 
 To display list of all expenses as an Python object:
 ```bash
-$ python budget-manager.py export-python
+$ python budget_manager.py export-python
+```
+
+To clear database file:
+```bash
+$ python budget_manager.py clear-db
+$ Are You sure? (Y/N): N
 ```
 
 
