@@ -42,6 +42,11 @@ def load_or_create_db() -> list[Expense]:
     return expenses
 
 
+def clear_database() -> None:
+    with open(DB_FILENAME, "wb") as stream:
+        pickle.dump([], stream)
+
+
 def save_expenses(expenses: list[Expense]) -> None:
     with open(DB_FILENAME, 'wb') as stream:
         pickle.dump(expenses, stream)
@@ -110,6 +115,13 @@ def report() -> None:
     expenses = load_or_create_db()
     total = compute_total(expenses)
     print_report(expenses, total)
+
+
+@cli.command('clear-db')
+def clear_db():
+    decision = input("Are You sure? (Y/N): ")
+    if decision.lower() == "y":
+        clear_database()
 
 
 @cli.command('export-python')
