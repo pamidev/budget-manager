@@ -33,6 +33,7 @@ Tanks to this project, I learned how to:
   - [_sys_](https://docs.python.org/3/library/sys.html) module
 - from Python third-party packages:
   - [_click_](https://pypi.org/project/click/) package - version 8.1.3
+  - [_pytest_](https://pytest.org/) package - version 7.3.1
 
 
 ## Features
